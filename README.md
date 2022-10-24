@@ -21,6 +21,6 @@ Please run syncSessions.py dec22 sess1 2021-12-22-15-59 to extract the data for 
 
 The first 48 bytes in each file can be unpacked as meta data "QBBBBIIIIIIIII" where meta[0] is the record timestamp which is an unsinged long integer (8-bytes) at the beginning of each file (micro second unit). meta[5,6,7] is the distance from the tag to anc0, anc1, anc2. Please refer to the helper code syncSessions.py for other details such as sequence number, first_path_index (FPI) or reception & transmission timestamp of each packet in a transaction. (Or wait for a while -- I will write more when I have time. Thanks for your patience).
 
-If you have any request, please contact Vu Tran at vu.tran.apollo@gmail.com or vu.tran@cs.ox.ac.uk 
+If you have any request, please contact Vu Tran at vu.tran.apollo@gmail.com (Please do not send email to vu.tran@cs.ox.ac.uk as I have recently left the university) 
 
 Thank you.
