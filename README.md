@@ -25,7 +25,7 @@ The next 30 bytes (start at 48) are 6 timestamps recorded in a transaction, each
 
 The next 17 bytes (start at 78) are 8 16-bit fields and 1 8-bit field: FPI (First Path Index) of the packet, FPIAMp1, FPIAmp2, FPIAmp3, MaxGrowCIR, MaxNoise, StdNoise, RxPreamCount, and Sequence Number (8-bit). Please read DWM1000 datasheet & User manual for the details of those diagnostic values.
 
-**! Note that the sensor (Poll) reports the range for the previous transaction (previous sequence number) **.
+** ! Note that the sensor (Poll) reports the range for the previous transaction (previous sequence number) **.
 
 The CIR data starts at 98 (78 + 20), including 120 samples (16-bit real, 16-bit imaginary).
 
