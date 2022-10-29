@@ -21,7 +21,7 @@ Please run syncSessions.py dec22 sess1 2021-12-22-15-59 to extract the data for 
 
 The first 48 bytes in each file can be unpacked as meta data "QBBBBIIIIIIIII" where meta[0] is the record timestamp which is an unsinged long integer (8-bytes) at the beginning of each file (micro second unit). meta[1] is node address: bit_7 == 0 indicates anchor, 3 LSB bits indicate node index (anchor/tag 0,1,2,...). meta[2] indicates if the measurement is valid or not. meta[5,6,7,8] is the distance from the tag to anc0, anc1, anc2 (and anc3 if used). meta[9,10,11,12] is the corresponding raw measurements.
 
-The next 30 bytes (start at 48) are 6 timestamps recorded in a transaction, each 5 bytes: Poll_Tx, Final_Tx, Resp_Tx, Final_Rx, Poll_Rx, Resp_Rx.
+The next 30 bytes (start at 48) are 6 timestamps recorded in a transaction, each 5 bytes: Poll_Tx, Final_Tx, Resp_Tx, Final_Rx, Poll_Rx, Resp_Rx. The timestamps are recorded at the anchors only, the tag also reports its timestamps to the anchors. For example, anchor 0 recorded all timestamps between the tag and anchor 0 (6 timestamps); anchor 1 recorded all timestamps between the tag and anchor 1 (6 timestamps).
 
 The next 17 bytes (start at 78) are 8 16-bit fields and 1 8-bit field: FPI (First Path Index) of the packet, FPIAMp1, FPIAmp2, FPIAmp3, MaxGrowCIR, MaxNoise, StdNoise, RxPreamCount, and Sequence Number (8-bit). Please read DWM1000 datasheet & User manual for the details of those diagnostic values.
 
