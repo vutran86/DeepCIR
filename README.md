@@ -4,8 +4,11 @@ DeepCIR: Insights into CIR-based Data-driven UWB Error Mitigation for Indoor Nav
 Please be patient. A clean version of dataset and code will be uploaded soon!
 
 Updated: the extracted dataset has been uploaded (in dataset/train) which is ready for training. Each data file contains CIR buffer (120-sample), each label file contains the error in metre.
+
 The convention in the double label file is Error(metre), Estimated distance(metre -- raw value estimated by the sensor), Groundtruth distance(metre), Poll FP index, Resp FP index, Final FP index
+
 The convention in the single label file is Error(metre), Estimated distance(metre -- raw value estimated by the sensor), Groundtruth distance(metre), FP index
+
 Please note that the "double" means double-sided CIR. train_cir_poll.npy, train_cir_resp.npy and train_cir_final.npy are synchronized (same for val-). It means that train_cir_poll[index],train_cir_resp[index],train_cir_final[index] belong to the same transaction. The FMCIR and WMCIR models as well as the baseline models are in code/models.py
 
 Please download the raw dataset from my googledrive (it is too big for github) using [this link](https://drive.google.com/file/d/1YCYWVyXA_92Huwdrvyt7Udk4TJyofzZW/view?usp=sharing). Extract all the content into dataset/raw. You will see something like this:
